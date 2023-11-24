@@ -105,6 +105,26 @@ h2 {
     border-radius: var(--border-radius);
     background: hsla(0, 0%, 100%, 0.8);
 }
+.comparison-table a {
+    color: hsl(210, 94%, 42%);
+    text-decoration: none;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: hsla(210, 94%, 42%, 0.3);
+}
+
+.comparison-table a:hover {
+    text-decoration: underline;
+    color: hsl(210, 100%, 50%);
+    text-decoration-color: hsla(210, 100%, 50%, 0.7);
+}
+
+.comparison-table a:active {
+    text-decoration: underline;
+    color: hsl(210, 100%, 42%);
+    text-decoration-color: hsla(210, 100%, 42%, 1);
+}
+
 .comparison-table tr{
     transition: all 200ms ease-out;
 }
