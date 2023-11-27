@@ -116,11 +116,11 @@ h2 {
 }
 
 .comparison-table a {
-    color: hsl(210, 94%, 35%);
+    color: hsl(210, 94%, 30%);
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 1px;
-    text-decoration-color: hsla(210, 94%, 35%, 0.3);
+    text-decoration-color: hsla(210, 94%, 30%, 0.2);
 }
 
 .comparison-table a:hover {
@@ -215,6 +215,7 @@ h2 {
 .comparison-table-feature-desc {
     font-size: 14px;
     opacity: 0.7;
+    margin-top: 2px;
 }
 
 .comparison-value-positive {
