@@ -218,19 +218,23 @@ h2 {
     margin-top: 2px;
 }
 
+.comparison-value-positive,
+.comparison-value-warning,
+.comparison-value-negative{
+    position: relative;
+    font-size: 0.9375em;
+}
+
 .comparison-value-positive {
     color: hsl(147 80% 29% / 1);
-    position: relative;
 }
 
 .comparison-value-warning {
     color: hsla(42, 85%, 35%, 1);
-    position: relative;
 }
 
 .comparison-value-negative {
     color: hsla(224, 8%, 50%, 1);
-    position: relative;
 }
 
 .comparison-value-positive::after,
