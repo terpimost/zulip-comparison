@@ -189,6 +189,16 @@ h2 {
     top: 60px;
     z-index: 1;
 }
+#cloud-comparison.comparison-table th:not(.sticky) {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#all-pans-comparison.comparison-table th:not(.sticky) {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+}
+
 
 .comparison-table td.subheader.comparison-table-feature {
     font-weight: 600;
@@ -210,6 +220,10 @@ h2 {
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 0;
+}
+#cloud-comparison.comparison-table th.sticky  {
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .comparison-table.comparison-all th.sticky {
     padding-top: 4px;
@@ -364,7 +378,7 @@ table#all-pans-comparison._hidden {
     }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 860px) {
 
     .comparison-table th,
     .comparison-table th.sticky {
@@ -374,7 +388,7 @@ table#all-pans-comparison._hidden {
         height: 44px;
         padding: 4px 8px 4px;
     }
-    #all-pans-comparison.comparison-table th,
+    #all-pans-comparison.comparison-table th:not(.sticky),
     #all-pans-comparison.comparison-table th.sticky {
         padding: 4px 2px 4px;
     }
@@ -402,6 +416,7 @@ table#all-pans-comparison._hidden {
 
     .comparison-table th.comparison-table-feature,
     #all-pans-comparison.comparison-table th.comparison-table-feature,
+    #cloud-comparison.comparison-table th.comparison-table-feature,
     .comparison-table td.comparison-table-feature {
         padding-left: 8px;
     }
@@ -419,6 +434,7 @@ table#all-pans-comparison._hidden {
     .comparison-table td.comparison-value-negative {
         font-size: 13px;
         line-height: 14px;
+        word-break: break-word;
     }
 
     .comparison-value-positive::after,
@@ -438,9 +454,6 @@ table#all-pans-comparison._hidden {
 }
 
 @media (max-width: 420px) {
-    #all-pans-comparison.comparison-table colgroup col:first-child {
-        width: 120px;
-    }
     .comparison-table .icon{
         transform: scale(0.75);
     }
