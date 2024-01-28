@@ -29,7 +29,7 @@ h1 {
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: white;
     padding: 0 10px;
-    margin: 0 auto;
+    margin: 0 auto 16px;
     z-index: 5;
     max-width: 560px;
 }
@@ -71,6 +71,7 @@ h2 {
     z-index: 5;
 }
 
+.comparison-tabs .icon,
 .comparison-table .icon {
     vertical-align: middle;
     display: inline-block;
@@ -85,6 +86,7 @@ h2 {
     width: 24px;
     height: 24px;
 }
+.comparison-tabs .icon-plan,
 .comparison-table .icon-plan {
     width: 16px;
     height: 16px;
@@ -117,7 +119,7 @@ h2 {
 .comparison-table {
     --border-radius: 11px;
     border-collapse: collapse;
-    margin: 24px auto 48px;
+    margin: 16px auto 48px;
     font-family: var(--font-ss3);
     color: hsl(223, 40%, 25%);
     text-align: center;
@@ -290,18 +292,57 @@ h2 {
     opacity: 1;
 }
 
-
 /* Switch related */
-table#cloud-comparison{
-
+/* default */
+table#cloud-comparison._hidden,
+table#self-hosted-comparison._hidden,
+table#all-pans-comparison._hidden {
+    display: none; 
 }
 
-table#self-hosted-comparison,
-table#all-pans-comparison {
-    /* display: none;  */
+.comparison-wrapper {
+    display: flex;
+    justify-content: center;
 }
-
-
+.comparison-tabs {
+    display: flex;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, 0.7);
+    padding: 3px;
+    border-radius: 6px;
+    gap: 3px;
+}
+.comparison-tab {
+    font-family: var(--font-ops);
+    font-size: 16px;
+    padding: 2px 8px 2px 8px;
+    color: hsl(223deg 40% 30%);
+    font-weight: 600;
+    border: none;
+    background: hsla(0, 0%, 100%, 0);
+    display: flex;
+    justify-content: center;
+    gap: 0.5ch;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 120ms ease-out;
+}
+.comparison-tab:hover{
+    transition: none;
+    background: hsla(0, 0%, 100%, 0.4);
+}
+.comparison-tab:active{
+    transition: all 120ms ease-out;
+    background: hsla(0, 0%, 100%, 0.7);
+}
+.comparison-tab i{
+    transform: translateY(1px);
+}
+.comparison-tab._selected{
+    background: hsla(0, 0%, 100%, 0.8);
+    cursor: default;
+}
 
 @media (max-width: 940px) {
     h1 {

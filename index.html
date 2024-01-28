@@ -307,6 +307,14 @@
       All plans are using the same 100% <a href="https://github.com/zulip/zulip">open-source codebase</a>
     </div>
 
+    <div class="comparison-wrapper">
+      <div class="comparison-tabs">
+        <button class="comparison-tab _selected" data-label="tab-cloud"><i class="icon icon-plan icon-cloud"></i>Cloud</button>
+        <button class="comparison-tab" data-label="tab-hosted"><i class="icon icon-plan icon-hard-drive"></i>Self-hosted</button>
+        <button class="comparison-tab" data-label="tab-all"><i class="icon icon-plan icon-cloud"></i><i class="icon icon-plan icon-hard-drive"></i>All plans</button>
+      </div>
+    </div>
+    
 
 
     <!-- comparison-table-top is important to observe sticky table header -->
@@ -432,10 +440,7 @@
       </tbody>
     </table>
 
-
-
-
-    <table id="self-hosted-comparison" class="comparison-table">
+    <table id="self-hosted-comparison" class="comparison-table _hidden">
       <colgroup>
         <col>
         <col span="4">
@@ -1144,14 +1149,14 @@
       </tbody>
     </table>
 
-    <table id="all-pans-comparison" class="comparison-table comparison-all">
+    <table id="all-pans-comparison" class="comparison-table comparison-all _hidden">
       <colgroup>
         <col>
         <col span="7">
       </colgroup>
       <thead>
         <tr>
-          <th class="comparison-table-feature">Features</th>
+          <th class="comparison-table-feature"><br>Features</th>
 
           <th><i class="icon icon-plan icon-cloud"></i><br>Free</th>
           <th><i class="icon icon-plan icon-cloud"></i><br>Standard</th>
@@ -1431,6 +1436,30 @@
     }, { threshold: [1] });
 
     observer.observe(document.querySelector('.comparison-table-top'));
+    const comparisonTabs = document.querySelectorAll('.comparison-tab')
+    comparisonTabs.forEach( it=>it.addEventListener('click', onTabClick) )
+    function onTabClick(e){
+      const label = e.currentTarget.dataset.label
+      comparisonTabs.forEach(it=>it.classList.remove('_selected'))
+      e.currentTarget.classList.add('_selected')
+
+      const tables = document.querySelectorAll('.comparison-table')
+      tables.forEach(it=>it.classList.add('_hidden'))
+
+      switch(label){
+        case 'tab-cloud':
+          document.getElementById('cloud-comparison').classList.remove('_hidden');
+        break;
+        case 'tab-hosted':
+          document.getElementById('self-hosted-comparison').classList.remove('_hidden');
+        break;
+        case 'tab-all':
+          document.getElementById('all-pans-comparison').classList.remove('_hidden');
+        break;
+      }
+      
+    }
+
   </script>
 </body>
 
