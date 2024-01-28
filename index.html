@@ -307,9 +307,135 @@
       All plans are using the same 100% <a href="https://github.com/zulip/zulip">open-source codebase</a>
     </div>
 
+
+
     <!-- comparison-table-top is important to observe sticky table header -->
     <div class="comparison-table-top"></div>
-    <table class="comparison-table">
+
+    <table id="cloud-comparison" class="comparison-table">
+      <colgroup>
+        <col>
+        <col span="3">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="comparison-table-feature">Features</th>
+          <th>Free</th>
+          <th>Standard</th>
+          <th>Plus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="comparison-table-feature subheader">Collaboration basics</td>
+          <td colspan="3" class="subheader-filler"></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/search-for-messages">Message history search</a></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/invite-new-users">Users</a></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/streams-and-topics">Streams</a></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/streams-and-topics">Topic-based threading</a></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/share-and-upload-files">File sharing and storage</a></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/start-a-call">Voice and video calls (1:1)</a>
+            <div class="comparison-table-feature-desc">Via third party service like Jitsi, Zoom, etc.</div>
+          </td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/start-a-call">Voice and video calls (group)</a>
+            <div class="comparison-table-feature-desc">Via third party service like Jitsi, Zoom, etc.</div>
+          </td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/integrations/">Integrations with other apps</a></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://explore.transifex.com/zulip/zulip/">Localized in more than N languages</a></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+        </tr>
+
+        <tr>
+          <td class="comparison-table-feature subheader">Apps</td>
+          <td colspan="4" class="subheader-filler"></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/supported-browsers">Web app</a>
+            <div class="comparison-table-feature-desc">Any modern browser</div>
+          </td>
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/apps/">Desktop apps</a>
+            <div class="comparison-table-feature-desc">Windows, Mac, Linux</div>
+          </td>
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/apps/">Mobile apps</a>
+            <div class="comparison-table-feature-desc">iOS and Android</div>
+          </td>
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/apps/">Terminal app</a></td>
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/mobile-notifications">Mobile push notifications</a></td>
+          <td class="comparison-value-negative" aria-label="Not available"><i class="icon icon-x"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+    <table id="self-hosted-comparison" class="comparison-table">
       <colgroup>
         <col>
         <col span="4">
@@ -1017,6 +1143,179 @@
 
       </tbody>
     </table>
+
+    <table id="all-pans-comparison" class="comparison-table comparison-all">
+      <colgroup>
+        <col>
+        <col span="7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="comparison-table-feature">Features</th>
+
+          <th><i class="icon icon-plan icon-cloud"></i><br>Free</th>
+          <th><i class="icon icon-plan icon-cloud"></i><br>Standard</th>
+          <th><i class="icon icon-plan icon-cloud"></i><br>Plus</th>
+
+          <th><i class="icon icon-plan icon-hard-drive"></i><br>Self-<wbr>managed</th>
+          <th><i class="icon icon-plan icon-hard-drive"></i><br>Comm<wbr>unity</th>
+          <th><i class="icon icon-plan icon-hard-drive"></i><br>Busi<wbr>ness</th>
+          <th><i class="icon icon-plan icon-hard-drive"></i><br>Enter<wbr>prise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="comparison-table-feature subheader">Collaboration basics</td>
+          <td colspan="7" class="subheader-filler"></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/search-for-messages">Message history search</a></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/invite-new-users">Users</a></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/streams-and-topics">Streams</a></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/streams-and-topics">Topic-based threading</a></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/share-and-upload-files">File sharing and storage</a></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/start-a-call">Voice and video calls (1:1)</a>
+            <div class="comparison-table-feature-desc">Via third party service like Jitsi, Zoom, etc.</div>
+          </td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/start-a-call">Voice and video calls (group)</a>
+            <div class="comparison-table-feature-desc">Via third party service like Jitsi, Zoom, etc.</div>
+          </td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/integrations/">Integrations with other apps</a></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+          <td class="comparison-value-positive" aria-label="Unlimited"><i class="icon icon-infinity"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://explore.transifex.com/zulip/zulip/">Localized in more than N languages</a></td>
+
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+        </tr>
+
+        <tr>
+          <td class="comparison-table-feature subheader">Some other category</td>
+          <td colspan="7" class="subheader-filler"></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/help/supported-browsers">Feature 1</a>
+            <div class="comparison-table-feature-desc">Feature description</div>
+          </td>
+
+          <td class="comparison-value-positive" aria-label="Self-managed"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+        </tr>
+        <tr>
+          <td class="comparison-table-feature"><a href="https://zulip.com/apps/">Feature 2</a>
+            <div class="comparison-table-feature-desc">Another feature description</div>
+          </td>
+
+          <td></td>
+          <td></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+
+          <td class="comparison-value-warning" aria-label="Self-managed"><i class="icon icon-wrench"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+          <td class="comparison-value-positive" aria-label="Supported"><i class="icon icon-check"></i></td>
+        </tr>
+      </tbody>
+    </table>
+   
 
   </div>
 
