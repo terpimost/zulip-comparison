@@ -207,7 +207,8 @@ h2 {
 }
 
 .comparison-table th.sticky {
-    padding: 8px 2px 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     border-radius: 0;
 }
 .comparison-table.comparison-all th.sticky {
