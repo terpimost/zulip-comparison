@@ -398,6 +398,7 @@ table#all-pans-comparison._hidden {
     }
 
     .comparison-table th.comparison-table-feature,
+    #all-pans-comparison.comparison-table th.comparison-table-feature,
     .comparison-table td.comparison-table-feature {
         padding-left: 8px;
     }
