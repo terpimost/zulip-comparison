@@ -194,7 +194,6 @@ h2 {
     padding-right: 16px;
 }
 #all-pans-comparison.comparison-table th:not(.sticky) {
-    padding-left: 8px;
     padding-right: 8px;
     padding-top: 8px;
 }
@@ -299,6 +298,7 @@ h2 {
     transition: visibility 301s linear, opacity 250ms ease-out;
 }
 
+
 .comparison-value-positive:hover::after,
 .comparison-value-warning:hover::after,
 .comparison-value-negative:hover::after {
@@ -359,7 +359,7 @@ table#all-pans-comparison._hidden {
     cursor: default;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 959px) {
     h1 {
         font-size: 40px;
     }
@@ -375,6 +375,13 @@ table#all-pans-comparison._hidden {
 
     .h2-subheader {
         font-size: 14px;
+    }
+
+    /* correcting tooltip to avoid horizontal scroll */
+    td:last-child.comparison-value-positive::after,
+    td:last-child.comparison-value-warning::after,
+    td:last-child.comparison-value-negative::after {
+        left: calc(0% + 10px);
     }
 }
 
